@@ -251,6 +251,15 @@ service dts_configurator /system/vendor/bin/dts_configurator
     user system
     group media audio
     oneshot
+    
+on boot
+    # Update cpusets on boot and we want better load balancing
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/foreground/cpus 0-6
+    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/restricted/cpus 0-3
+
 
 service dtseagleservice /system/vendor/bin/dts_eagle_service
     class late_start
