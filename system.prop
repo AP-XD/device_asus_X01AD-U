@@ -19,8 +19,10 @@ DEVICE_PROVISIONED=1
 #
 ro.telephony.default_network=22,22
 
+# Graphics
+ro.surface_flinger.protected_contents=true
 debug.sf.disable_backpressure=1
-debug.sf.hw=0
+debug.sf.hw=1
 debug.sf.latch_unsignaled=1
 debug.egl.hw=0
 persist.hwc.mdpcomp.enable=true
