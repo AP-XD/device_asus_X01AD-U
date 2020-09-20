@@ -54,6 +54,13 @@ void property_override(char const prop[], char const value[], bool add = true)
     }
 }
 
+void property_override_triple(char const system_prop[], char const vendor_prop[], char const bootimg_prop[], char const value[])
+{
+    property_override(system_prop, value);
+    property_override(vendor_prop, value);
+    property_override(bootimg_prop, value);
+}
+
 char const *heapstartsize;
 char const *heapgrowthlimit;
 char const *heapsize;
@@ -98,6 +105,8 @@ void vendor_load_properties()
 {
 
     check_device();
+
+    property_override_triple("ro.build.fingerprint", "ro.vendor.build.fingerprint", "ro.bootimage.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
 
     property_override("dalvik.vm.heapstartsize", heapstartsize);
     property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
