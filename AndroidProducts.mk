@@ -1,12 +1,13 @@
 #
-# Copyright (C) 2020 ArrowOS
+# Copyright (C) 2020 The Nusantara Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_X01AD.mk
+    $(LOCAL_DIR)/nad_X01AD.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_X01AD-user \
-    arrow_X01AD-userdebug
+    nad_X01AD-user \
+    nad_X01AD-userdebug \
+	nad_X01AD-eng
