@@ -20,9 +20,5 @@
       "repository":"android_vendor_asus_X01AD",
       "target_path":"vendor/asus/X01AD",
       "branch":"eleven"
-   },
-   {
-      "repository":"android_packages_apps_GcamGOPrebuilt",
-      "target_path":"packages/apps/GcamGOPrebuilt"
    }
 ]
