@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2020 The Nusantara Project
+# Copyright (C) 2020 The Pixel Plus Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/nad_X01AD.mk
+    $(LOCAL_DIR)/aosp_X01AD.mk
 
 COMMON_LUNCH_CHOICES := \
-    nad_X01AD-user \
-    nad_X01AD-userdebug \
-	nad_X01AD-eng
+    aosp_X01AD-user \
+    aosp_X01AD-userdebug \
+	aosp_X01AD-eng
