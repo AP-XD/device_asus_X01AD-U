@@ -122,7 +122,7 @@ PRODUCT_PACKAGES += \
     libstdc++.vendor
 
 PRODUCT_PACKAGES += \
-    GCamGOPrebuilt
+    Snap
 
 # CNE
 PRODUCT_PACKAGES += \
