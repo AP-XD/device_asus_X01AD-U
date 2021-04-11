@@ -1,7 +1,17 @@
 #
-# Copyright (C) 2020 ArrowOS Project
+# Copyright (C) 2017 The LineageOS Project
 #
-# SPDX-License-Identifier: Apache-2.0
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
 
 DEVICE_PATH := device/asus/X01AD
@@ -14,14 +24,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Inherit some common ArrowOS stuff
-$(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/legion/config/common_full_phone.mk)
 
 # Inherit device stuff
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Device identifiers.
 PRODUCT_DEVICE := X01AD
-PRODUCT_NAME := arrow_X01AD
+PRODUCT_NAME := legion_X01AD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := Asus Zenfone Max M2
 PRODUCT_MANUFACTURER := asus
@@ -38,7 +48,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 	
 PRODUCT_GMS_CLIENTID_BASE := android-asus
-# ArrowOS Properties
+# LegionOS Device Maintainer
+PPRODUCT_PROPERTY_OVERRIDES += \
+    ro.maintainer.name=AP_XD
+
+# Face Unlock Flag
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Gapps
+IS_PHONE := true
+TARGET_GAPPS_ARCH += arm64
 TARGET_BOOT_ANIMATION_RES := 1080
-DEVICE_MAINTAINER := AP_XD
 TARGET_INCLUDE_PIXEL_CHARGER := true
