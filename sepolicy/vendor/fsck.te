@@ -1,1 +1,2 @@
 allow fsck self:capability { kill };
+allow fsck sysfs_battery_supply:dir { search };

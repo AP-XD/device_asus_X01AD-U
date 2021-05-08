@@ -4,3 +4,5 @@ allow qti_init_shell ctl_stop_prop:property_service { set };
 allow qti_init_shell proc_boot_reason:file { read };
 allow qti_init_shell bluetooth_data_file:file r_file_perms;
 allow qti_init_shell sysfs:file { setattr };
+allow qti_init_shell configfs:dir { write };
+allow qti_init_shell proc_boot_reason:file { open };
